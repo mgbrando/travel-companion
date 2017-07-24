@@ -38,11 +38,13 @@ body, ul, li, span, div{
 	margin-bottom: 40px;
 	font-size: 100px;
 	text-shadow: 4px 4px black;
+	color: white;
 }
 .start-screen-direction{
 	font-family: 'Palanquin', sans-serif;
 	margin-bottom: 10px;
 	text-shadow: 2px 2px black;
+	color: white;
 }
 #js-start-search-form{
 	max-width: 500px;
