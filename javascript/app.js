@@ -835,26 +835,30 @@ function handleNavButtons(){
 	$('.js-nav-button').on('click', function(event){
 		var section='';
 		var text=$(this).text();
-		$('.js-nav-select').text(text);
+		//$('.js-nav-select').text(text);
 		switch(text){
 			case 'Entertainment':
+				$('.js-nav-select').removeClass('glyphicon-picture glyphicon-calendar glyphicon-text-size').addClass('glyhpicon-film');
 				$('.js-top-events, .js-translation, .js-gallery').addClass('hidden');
 				section='.js-top-attractions';
 				hideSelectedSection('.dropdown-content div:first-child');
 				break;
 			case 'Events':
+				$('.js-nav-select').removeClass('glyhpicon-film glyphicon-picture glyphicon-text-size').addClass('glyphicon-calendar');
 				$('.js-top-attractions, .js-translation, .js-gallery').addClass('hidden');
 				section='.js-top-events';
 				hideSelectedSection('.dropdown-content div:nth-child(2)');
 				break;
 
 			case 'Images':
+				$('.js-nav-select').removeClass('glyhpicon-film glyphicon-calendar glyphicon-text-size').addClass('glyphicon-picture');
 				$('.js-top-events, .js-translation, .js-top-attractions').addClass('hidden');
 				section='.js-gallery';
 				hideSelectedSection('.dropdown-content div:nth-child(3)');
 				break;
 
 			case 'Translator':
+				$('.js-nav-select').removeClass('glyhpicon-film glyphicon-picture glyphicon-calendar').addClass('glyphicon-text-size');
 				$('.js-top-events, .js-gallery, .js-top-attractions').addClass('hidden');
 				section='.js-translation';
 				hideSelectedSection('.dropdown-content div:last-child');
@@ -873,17 +877,17 @@ function handleMapButton(){
 		if(applicationState.mapOpen){
 			$('.js-main-map, .js-map-background').fadeOut(500);
 			applicationState.mapOpen=false;
-			$('.js-map-button').text("Map").removeClass('mapOpen');
+			$('.js-map-button').removeClass('mapOpen');
 		}
 		else{
 			if(applicationState.initialMap){
 				$('.js-main-map, .js-map-background').addClass('reveal-map').fadeIn(500);
 				applicationState.initialMap=false;
-				$('.js-map-button').text("Close Map").addClass('mapOpen');
+				$('.js-map-button').addClass('mapOpen');
 			}
 			else{
 				$('.js-main-map, .js-map-background').fadeIn(500);
-				$('.js-map-button').text("Close Map").addClass('mapOpen');
+				$('.js-map-button').addClass('mapOpen');
 				google.maps.event.trigger(googleMaps.maps.searchMap.map, "resize");
 				googleMaps.maps.searchMap.map.panTo(googleMaps.maps.searchMap.marker.getPosition());
 			}
