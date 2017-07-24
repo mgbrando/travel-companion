@@ -1,19 +1,19 @@
 # Travel Plan
 
 ## Screens
-###*Start Screen:* 
+### *Start Screen:* 
 ![Start Screen] (images/start-screen.png)
-###*Map Screen:* 
+### *Map Screen:* 
 ![Map] (images/map-screen.png)  
-###*Entertainment Screen:*
+### *Entertainment Screen:*
 ![Entertainment Screen](images/entertainment-screen.png)  
-###*Events Screen:*
+### *Events Screen:*
 ![Events Screen] (images/events-screen.png)  
-###*Images Screen:*
+### *Images Screen:*
 ![Images] (images/images-screen.png)  
-###*Image Gallery Screen:*
+### *Image Gallery Screen:*
 ![Image Gallery] (images/image-gallery-screen.png)  
-###*Translator Screen:*
+### *Translator Screen:*
 ![Translator] (images/translator-screen.png)  
 
 ## Summary
