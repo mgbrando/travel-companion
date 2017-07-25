@@ -2,24 +2,24 @@
 
 ## Screens
 ### *Start Screen:* 
-![Start Screen] (images/start-screen.png)
+![Start Screen](images/start-screen.png)
 ### *Map Screen:* 
-![Map] (images/map-screen.png)  
+![Map](images/map-screen.png)  
 ### *Entertainment Screen:*
 ![Entertainment Screen](images/entertainment-screen.png)  
 ### *Events Screen:*
-![Events Screen] (images/events-screen.png)  
+![Events Screen](images/events-screen.png)  
 ### *Images Screen:*
-![Images] (images/images-screen.png)  
+![Images](images/images-screen.png)  
 ### *Image Gallery Screen:*
-![Image Gallery] (images/image-gallery-screen.png)  
+![Image Gallery](images/image-gallery-screen.png)  
 ### *Translator Screen:*
-![Translator] (images/translator-screen.png)  
+![Translator](images/translator-screen.png)  
 
 ## Summary
 The travel plan app is an application used to plan a trip ahead of time or while in the location you are traveling to. The app allows you to search a location. Based off of that location you will be able to view the top places and events nearby that previous people have enjoyed. You will also be able to view images of the area as well as use a language translator that can be used to translate english into the language of the current selected area.
 
-##Technology
+## Technology
 * This app was built using HTML5, CSS, Javascript, and jQuery
 * Normalize.CSS was used as a css starting point
 * The following APIs were used for map and location functionality:
