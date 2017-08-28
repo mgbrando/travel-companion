@@ -1,4 +1,4 @@
-# Travel Plan
+# Travel Companion
 
 ## Screens
 ### *Start Screen:* 
