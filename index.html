@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Travel Companion</title>
 	<meta name="description" content="App used to find places to visit in a geographic location, that is of interest to the user.">
@@ -7,31 +8,34 @@
 	<meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
 	<link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/5.0.0/normalize.css">
 	<link rel="stylesheet" href="blueimp/css/blueimp-gallery.min.css">
-  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="styles/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Great+Vibes|Karla|Montserrat:400i,700i|Palanquin|Roboto|Varela" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="styles/app.css">
 </head>
+
 <body>
 	<section class="js-start-screen start-screen">
 		<div class="intro-vid-section">
-  			<video autoplay loop muted class="intro-vid" poster="images/city.png">
-    			<source src="images/city-compressed.mp4" type="video/mp4">
-    			<source src="images/city-compressed.webm" type="video/webm">
-    			<source src="images/city-compressed.ogv" type="video/ogg">
-  			</video>
+			<video autoplay loop muted class="intro-vid">
+				<source src="images/city-compressed.mp4" type="video/mp4">
+				<source src="images/city-compressed.webm" type="video/webm">
+				<source src="images/city-compressed.ogv" type="video/ogg">
+			</video>
 		</div>
 		<div class="front-content-wrapper">
-		<div class="front-content">
-			<header class="start-screen-header">Travel Companion</header>
-			<form id="js-start-search-form">
-				<p class="start-screen-direction">Please type in the name of a location:</p>
-				<input class="js-search-input search-input start" type="text" name="search-input" placeholder="Search locations...">
-				<button type="submit" class="js-search-submit search-submit btn btn-info btn-lg"><span class="glyphicon glyphicon-search"></span> Search </button>
-				<!--<input class="js-search-submit search-submit start" type="image" src="images/search-image.png" alt="Submit Form" />-->
-				<div class="js-bad-map-submit-request js-bad-front-submit bad-map-request bad-submit bad-front-submit hidden">The search term can be an address at the lowest level and a country at the highest level. The search must be in a google maps accepted from. (e.g. Tokyo, Japan or New York, NY)</div>
-			</form>
-		</div>
+			<div class="front-content">
+				<header class="start-screen-header">Travel Companion</header>
+				<form id="js-start-search-form">
+					<p class="start-screen-direction">Please type in the name of a location:</p>
+					<input class="js-search-input search-input start" type="text" name="search-input" placeholder="Search locations...">
+					<button type="submit" class="js-search-submit search-submit btn btn-info btn-lg">
+						<span class="glyphicon glyphicon-search"></span> Search </button>
+					<!--<input class="js-search-submit search-submit start" type="image" src="images/search-image.png" alt="Submit Form" />-->
+					<div class="js-bad-map-submit-request js-bad-front-submit bad-map-request bad-submit bad-front-submit hidden">The search term can be an address at the lowest level and a country at the highest level. The search must be in a google
+						maps accepted from. (e.g. Tokyo, Japan or New York, NY)</div>
+				</form>
+			</div>
 		</div>
 	</section>
 	<nav class="js-section-nav section-nav">
@@ -41,32 +45,44 @@
 			<div class="form-wrapper">
 				<form id="js-search-form">
 					<input class="js-search-input search-input" type="text" name="search-input" placeholder="Search locations...">
-					<button type="submit" class="js-search-submit search-submit btn btn-info btn-lg"><span class="glyphicon glyphicon-search"></span> Search </button>
+					<button type="submit" class="js-search-submit search-submit btn btn-info btn-lg">
+						<span class="glyphicon glyphicon-search"></span> Search </button>
 				</form>
 			</div>
 		</div>
 		<div class="nav-button-group">
 			<button class="js-map-button glyphicon glyphicon-globe map-button"></button>
 			<div class="options">
-  				<button class="js-nav-select nav-select glyphicon glyphicon-film"></button>
-  			  		<div class="dropdown-content">
-    				<div class="js-nav-button nav-button hidden">Entertainment</div>
-    				<div class="js-nav-button nav-button">Events</div>
-    				<div class="js-nav-button nav-button">Images</div>
-    				<div class="js-nav-button nav-button">Translator</div>
-    				</div>
-  			</div>
+				<button class="js-nav-select nav-select glyphicon glyphicon-film"></button>
+				<div class="dropdown-content">
+					<div class="js-nav-button nav-button hidden">Entertainment</div>
+					<div class="js-nav-button nav-button">Events</div>
+					<div class="js-nav-button nav-button">Images</div>
+					<div class="js-nav-button nav-button">Translator</div>
+				</div>
+			</div>
 		</div>
 	</nav>
-	<div class="js-bad-map-submit-request bad-map-request bad-submit hidden">The search term can be an address at the lowest level and a country at the highest level. The search must be in a google maps accepted from. (e.g. Tokyo, Japan or New York, NY)</div>
+	<div class="js-bad-map-submit-request bad-map-request bad-submit hidden">The search term can be an address at the lowest level and a country at the highest level. The search must be in a google
+		maps accepted from. (e.g. Tokyo, Japan or New York, NY)</div>
 	<main class="js-main-section main-section">
 		<div class="js-map-background map-background"></div>
 		<section class="js-main-map main-map">
 			<div class="js-bad-map-drag-request bad-map-request bad-drag hidden">Dragging the marker to the ocean will result in no change to the map or related pages.</div>
-			<div class="js-marker-toggle marker-toggle"><div><input id="places" class="js-marker-check" type="checkbox" name="places"><label for="places">Places</label></div><div><input id="events" class="js-marker-check" type="checkbox" name="events"><label for="events">Events</label></div></div>
+			<div class="js-marker-toggle marker-toggle">
+				<div>
+					<input id="places" class="js-marker-check" type="checkbox" name="places">
+					<label for="places">Places</label>
+				</div>
+				<div>
+					<input id="events" class="js-marker-check" type="checkbox" name="events">
+					<label for="events">Events</label>
+				</div>
+			</div>
 			<div id="search-map"></div>
 			<div class="js-location-description location-description">
-				<span class="property">Current Location</span>: <span class="js-address address">Japan</span>
+				<span class="property">Current Location</span>:
+				<span class="js-address address">Japan</span>
 			</div>
 		</section>
 		<section class="js-top-attractions top-attractions">
@@ -77,31 +93,42 @@
 			<header>Image Gallery</header>
 			<form id="js-image-options">
 				<div class="js-clear-on-change clear-on-change">Clear Map Markers on Destination Change: </div>
-				<label>On <input type="radio" name="markerClearOption" value="on"></label> 
-				<label>Off <input type="radio" name="markerClearOption" value="off" checked></label>
+				<label>On
+					<input type="radio" name="markerClearOption" value="on">
+				</label>
+				<label>Off
+					<input type="radio" name="markerClearOption" value="off" checked>
+				</label>
 				<div class="js-clear-markers clear-markers">Clear Markers</div>
 			</form>
 			<div id='links'></div>
 		</section>
 		<div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls" data-start-slideshow="false">
-    		<div class="slides"></div>
-    		<h3 class="title"></h3>
-    		<a class="prev">&lt;</a>
-    		<a class="next">&gt;</a>
-    		<a class="close">x</a>
-    		<a class="play-pause"></a>
-    		<ol class="indicator"></ol>
-    	</div>
+			<div class="slides"></div>
+			<h3 class="title"></h3>
+			<a class="prev">&lt;</a>
+			<a class="next">&gt;</a>
+			<a class="close">x</a>
+			<a class="play-pause"></a>
+			<ol class="indicator"></ol>
+		</div>
 		<section class="js-translation translation hidden">
-			<header class="js-translator-header translator-header">Language Translator: <span class="js-language language">Japanese</span></header>
+			<header class="js-translator-header translator-header">Language Translator:
+				<span class="js-language language">Japanese</span>
+			</header>
 			<div class="js-textbox">
 				<form id="js-translation-form">
 					<div class="translate-button-wrapper">
-						<div class="js-textarea-button translate-input-choice selectedTranslationType"><span>Text</span></div>
-						<div class="js-textarea-button translate-input-choice"><span>Speech</span></div>
+						<div class="js-textarea-button translate-input-choice selectedTranslationType">
+							<span>Text</span>
+						</div>
+						<div class="js-textarea-button translate-input-choice">
+							<span>Speech</span>
+						</div>
 					</div>
 					<div class="js-recording-section recording-section hidden">
-						<span class="js-record-text">Speak: </span><img class="record-audio" src="images/record_button.png" alt="Record/Pause Button">
+						<span class="js-record-text">Speak: </span>
+						<img class="record-audio" src="images/record_button.png" alt="Record/Pause Button">
 					</div>
 					<textarea class="js-textarea textarea" rows="8" cols="50" placeholder="Enter/Say text to be translated..."></textarea>
 					<div class="buttonholder">
@@ -120,12 +147,13 @@
 		</section>
 	</main>
 	<footer class="footer">Created by Matthew Brando</footer>
-	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+	 crossorigin="anonymous"></script>
 	<script src="blueimp/js/jquery.blueimp-gallery.min.js"></script>
-	<script type="text/javascript"
-	src="https://viralpatel.net/blogs/demo/jquery/jquery.shorten.1.0.js"></script>
+	<script type="text/javascript" src="https://viralpatel.net/blogs/demo/jquery/jquery.shorten.1.0.js"></script>
 	<script src="javascript/app.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCz6gKlHvkMprHXZ5gYtJvhiS9aUbDY9o&libraries=places&callback=initMaps"
-    async defer></script>
+	 async defer></script>
 </body>
+
 </html>
